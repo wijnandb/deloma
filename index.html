@@ -486,6 +486,7 @@
   }
 
   .project-bg {
+    position: absolute; inset: 0;
     width: 100%; height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease, opacity 0.3s;
@@ -496,25 +497,6 @@
   .project-card:hover .project-bg {
     transform: scale(1.08);
     opacity: 0.4;
-  }
-
-  /* Placeholder gradients for project images */
-  .project-card:nth-child(1) .project-bg-placeholder {
-    background: linear-gradient(160deg, #2a3040 0%, #1a1a16 60%, #3a2520 100%);
-  }
-  .project-card:nth-child(2) .project-bg-placeholder {
-    background: linear-gradient(160deg, #1e2830 0%, #1a1a16 60%, #2a3530 100%);
-  }
-  .project-card:nth-child(3) .project-bg-placeholder {
-    background: linear-gradient(160deg, #302520 0%, #1a1a16 60%, #252a20 100%);
-  }
-  .project-card:nth-child(4) .project-bg-placeholder {
-    background: linear-gradient(160deg, #252030 0%, #1a1a16 60%, #302030 100%);
-  }
-
-  .project-bg-placeholder {
-    width: 100%; height: 100%;
-    position: absolute; inset: 0;
   }
 
   .project-info {
@@ -1178,32 +1160,7 @@
   <div class="projects-grid reveal">
     <!-- Featured project -->
     <div class="project-card featured">
-      <div class="project-bg-placeholder" style="background: linear-gradient(160deg, #1e2535 0%, #0d0d0a 50%, #2a1a14 100%);"></div>
-      <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.2" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid slice">
-        <rect x="60" y="100" width="280" height="500" fill="none" stroke="#d4a853" stroke-width="0.5"/>
-        <rect x="80" y="120" width="240" height="460" fill="#1a1a16"/>
-        <g fill="#d4a853" opacity="0.5">
-          <rect x="95" y="140" width="30" height="22"/>
-          <rect x="135" y="140" width="30" height="22"/>
-          <rect x="175" y="140" width="30" height="22"/>
-          <rect x="215" y="140" width="30" height="22"/>
-          <rect x="255" y="140" width="30" height="22"/>
-          <rect x="295" y="140" width="30" height="22"/>
-          <rect x="95" y="176" width="30" height="22"/>
-          <rect x="135" y="176" width="30" height="22" opacity="0.3"/>
-          <rect x="175" y="176" width="30" height="22"/>
-          <rect x="215" y="176" width="30" height="22"/>
-          <rect x="255" y="176" width="30" height="22" opacity="0.3"/>
-          <rect x="295" y="176" width="30" height="22"/>
-          <rect x="95" y="212" width="30" height="22" opacity="0.3"/>
-          <rect x="135" y="212" width="30" height="22"/>
-          <rect x="175" y="212" width="30" height="22"/>
-          <rect x="215" y="212" width="30" height="22" opacity="0.3"/>
-          <rect x="255" y="212" width="30" height="22"/>
-          <rect x="295" y="212" width="30" height="22"/>
-        </g>
-        <rect x="120" y="500" width="160" height="80" fill="#1a1a16"/>
-      </svg>
+      <img class="project-bg" src="images/project-fabriekstoren.jpg" alt="De Fabriekstoren — modern industrieel wooncomplex in Amsterdam-Noord">
       <div class="project-roi">ROI +34%</div>
       <div class="project-info">
         <div class="project-type">Transformatie / Wonen</div>
@@ -1213,7 +1170,7 @@
     </div>
     <!-- Project 2 -->
     <div class="project-card">
-      <div class="project-bg-placeholder" style="background: linear-gradient(160deg, #1e2830, #0a0a0a, #1a2830);"></div>
+      <img class="project-bg" src="images/project-centrumkwartier.jpg" alt="Centrumkwartier Deventer — mixed-use herontwikkeling">
       <div class="project-roi">ROI +28%</div>
       <div class="project-info">
         <div class="project-type">Herontwikkeling / Mixed-use</div>
@@ -1223,7 +1180,7 @@
     </div>
     <!-- Project 3 -->
     <div class="project-card">
-      <div class="project-bg-placeholder" style="background: linear-gradient(160deg, #302520, #0a0a0a, #252a20);"></div>
+      <img class="project-bg" src="images/project-paviljoen.jpg" alt="Het Groene Paviljoen — duurzaam kantoorgebouw in Utrecht">
       <div class="project-roi">ROI +41%</div>
       <div class="project-info">
         <div class="project-type">Nieuwbouw / Kantoren</div>
@@ -1233,7 +1190,7 @@
     </div>
     <!-- Project 4 -->
     <div class="project-card">
-      <div class="project-bg-placeholder" style="background: linear-gradient(160deg, #252030, #0a0a0a, #302030);"></div>
+      <img class="project-bg" src="images/project-stadshart.jpg" alt="Stadshart Almelo — gerenoveerde appartementen">
       <div class="project-roi">ROI +22%</div>
       <div class="project-info">
         <div class="project-type">Renovatie / Wonen</div>
@@ -1453,7 +1410,7 @@
     </div>
     <div style="padding: 1.5rem 2rem; border: 1px solid rgba(245,242,236,0.12);">
       <div class="contact-type">Directe lijn</div>
-      <div class="contact-value" style="font-family: var(--mono); font-size: 1rem;">+31 (0) 20 — DeLOMA</div>
+      <div class="contact-value" style="font-family: var(--mono); font-size: 1rem;">071 - 203 2103</div>
     </div>
   </div>
 </section>
