@@ -216,9 +216,15 @@
   .hero-building {
     width: 100%; height: 100%;
     object-fit: cover;
-    opacity: 0.55;
+    opacity: 0.85;
     transform: scale(1.05);
+    transition: transform 0.8s ease, opacity 0.5s ease;
     animation: slowZoom 20s ease-in-out infinite alternate;
+  }
+
+  .hero-img-container:hover .hero-building {
+    transform: scale(1.12);
+    opacity: 1;
   }
 
   .hero-stat-overlay {
@@ -490,13 +496,13 @@
     width: 100%; height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease, opacity 0.3s;
-    opacity: 0.6;
+    opacity: 0.82;
     transform: scale(1.02);
   }
 
   .project-card:hover .project-bg {
     transform: scale(1.08);
-    opacity: 0.4;
+    opacity: 1;
   }
 
   .project-info {
@@ -970,102 +976,13 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-container">
-      <!-- Building visual as geometric SVG -->
-      <svg class="hero-building" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <rect width="600" height="800" fill="#0a0a08"/>
-        <!-- Sky gradient -->
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1a2030"/>
-            <stop offset="100%" stop-color="#0a0a08"/>
-          </linearGradient>
-          <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#c44b2b" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#c44b2b" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <rect width="600" height="800" fill="url(#sky)"/>
-        <!-- Ground -->
-        <rect x="0" y="650" width="600" height="150" fill="#050504"/>
-        <!-- Main building -->
-        <rect x="120" y="80" width="200" height="570" fill="#141414"/>
-        <!-- Building windows grid -->
-        <g fill="#d4a853" opacity="0.6">
-          <rect x="135" y="100" width="25" height="18"/>
-          <rect x="170" y="100" width="25" height="18"/>
-          <rect x="205" y="100" width="25" height="18"/>
-          <rect x="240" y="100" width="25" height="18"/>
-          <rect x="275" y="100" width="25" height="18"/>
-          <rect x="135" y="130" width="25" height="18"/>
-          <rect x="170" y="130" width="25" height="18"/>
-          <rect x="205" y="130" width="25" height="18" opacity="0.3"/>
-          <rect x="240" y="130" width="25" height="18"/>
-          <rect x="275" y="130" width="25" height="18"/>
-          <rect x="135" y="160" width="25" height="18" opacity="0.3"/>
-          <rect x="170" y="160" width="25" height="18"/>
-          <rect x="205" y="160" width="25" height="18"/>
-          <rect x="240" y="160" width="25" height="18" opacity="0.3"/>
-          <rect x="275" y="160" width="25" height="18"/>
-          <rect x="135" y="190" width="25" height="18"/>
-          <rect x="170" y="190" width="25" height="18" opacity="0.3"/>
-          <rect x="205" y="190" width="25" height="18"/>
-          <rect x="240" y="190" width="25" height="18"/>
-          <rect x="275" y="190" width="25" height="18" opacity="0.3"/>
-          <rect x="135" y="220" width="25" height="18" opacity="0.3"/>
-          <rect x="170" y="220" width="25" height="18"/>
-          <rect x="205" y="220" width="25" height="18" opacity="0.3"/>
-          <rect x="240" y="220" width="25" height="18"/>
-          <rect x="275" y="220" width="25" height="18"/>
-          <rect x="135" y="250" width="25" height="18"/>
-          <rect x="170" y="250" width="25" height="18"/>
-          <rect x="205" y="250" width="25" height="18"/>
-          <rect x="240" y="250" width="25" height="18" opacity="0.3"/>
-          <rect x="275" y="250" width="25" height="18" opacity="0.3"/>
-          <rect x="135" y="280" width="25" height="18" opacity="0.3"/>
-          <rect x="170" y="280" width="25" height="18"/>
-          <rect x="205" y="280" width="25" height="18"/>
-          <rect x="240" y="280" width="25" height="18"/>
-          <rect x="275" y="280" width="25" height="18" opacity="0.3"/>
-          <rect x="135" y="310" width="25" height="18"/>
-          <rect x="170" y="310" width="25" height="18" opacity="0.3"/>
-          <rect x="205" y="310" width="25" height="18"/>
-          <rect x="240" y="310" width="25" height="18" opacity="0.3"/>
-          <rect x="275" y="310" width="25" height="18"/>
-          <rect x="135" y="340" width="25" height="18"/>
-          <rect x="170" y="340" width="25" height="18"/>
-          <rect x="205" y="340" width="25" height="18" opacity="0.3"/>
-          <rect x="240" y="340" width="25" height="18"/>
-          <rect x="275" y="340" width="25" height="18" opacity="0.3"/>
-        </g>
-        <!-- Side building -->
-        <rect x="340" y="200" width="140" height="450" fill="#0f0f0d"/>
-        <g fill="#d4a853" opacity="0.4">
-          <rect x="355" y="220" width="20" height="14"/>
-          <rect x="385" y="220" width="20" height="14"/>
-          <rect x="415" y="220" width="20" height="14"/>
-          <rect x="445" y="220" width="20" height="14"/>
-          <rect x="355" y="246" width="20" height="14"/>
-          <rect x="385" y="246" width="20" height="14"/>
-          <rect x="415" y="246" width="20" height="14" opacity="0.3"/>
-          <rect x="445" y="246" width="20" height="14"/>
-          <rect x="355" y="272" width="20" height="14" opacity="0.3"/>
-          <rect x="385" y="272" width="20" height="14"/>
-          <rect x="415" y="272" width="20" height="14"/>
-          <rect x="445" y="272" width="20" height="14"/>
-        </g>
-        <!-- Rust glow -->
-        <rect x="0" y="0" width="200" height="800" fill="url(#glow)"/>
-        <!-- Ground line -->
-        <line x1="0" y1="650" x2="600" y2="650" stroke="#c44b2b" stroke-width="1" opacity="0.4"/>
-        <!-- DeLOMA mark subtle -->
-        <text x="300" y="720" text-anchor="middle" font-family="Georgia" font-size="11" fill="#d4a853" opacity="0.5" letter-spacing="6">DELOMA.NL</text>
-      </svg>
+      <img class="hero-building" src="images/hero.jpg" alt="Modern appartementencomplex met balkons in warm zonlicht">
       <div class="hero-grid-overlay"></div>
     </div>
     <div class="hero-stat-overlay">
       <div class="stat-card">
-        <span class="stat-num">€ 1B+</span>
-        <span class="stat-label">Ontwikkeld vastgoedvolume</span>
+        <span class="stat-num">2.400+</span>
+        <span class="stat-label">Gezinnen een nieuw thuis</span>
       </div>
     </div>
   </div>
@@ -1243,8 +1160,8 @@
     <div class="number-label">Projecten begeleid</div>
   </div>
   <div class="number-item">
-    <div class="number-big">€ 1B+</div>
-    <div class="number-label">Ontwikkeld vastgoedvolume</div>
+    <div class="number-big">2.400+</div>
+    <div class="number-label">Gezinnen een nieuw thuis</div>
   </div>
   <div class="number-item">
     <div class="number-big">340+</div>
@@ -1348,17 +1265,8 @@
   </div>
   <div class="insights-grid reveal">
     <div class="insight-card featured">
-      <div class="insight-img" style="background: linear-gradient(135deg, #1a2535, #0d0d0a);">
-        <svg style="width:100%;height:100%;opacity:0.3" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
-          <rect x="60" y="40" width="280" height="180" fill="none" stroke="#d4a853" stroke-width="0.5"/>
-          <rect x="80" y="60" width="80" height="140" fill="#1a1a16"/>
-          <rect x="170" y="80" width="80" height="120" fill="#141414"/>
-          <rect x="260" y="50" width="60" height="150" fill="#1e1e18"/>
-          <g fill="#d4a853" opacity="0.6">
-            <rect x="88" y="75" width="12" height="9"/><rect x="105" y="75" width="12" height="9"/><rect x="122" y="75" width="12" height="9"/>
-            <rect x="88" y="92" width="12" height="9"/><rect x="105" y="92" width="12" height="9"/><rect x="122" y="92" width="12" height="9"/>
-          </g>
-        </svg>
+      <div class="insight-img">
+        <img src="images/insight-omgevingswet.jpg" alt="Amsterdam grachtenpanden" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="insight-body">
         <div class="insight-category">Marktanalyse</div>
@@ -1367,7 +1275,9 @@
       </div>
     </div>
     <div class="insight-card">
-      <div class="insight-img" style="background: linear-gradient(135deg, #302520, #0a0a08);"></div>
+      <div class="insight-img">
+        <img src="images/insight-roi.jpg" alt="ROI berekening vastgoed" style="width:100%;height:100%;object-fit:cover;">
+      </div>
       <div class="insight-body">
         <div class="insight-category">Financiering</div>
         <div class="insight-title">ROI berekenen bij transformatieprojecten: de complete gids</div>
@@ -1375,7 +1285,9 @@
       </div>
     </div>
     <div class="insight-card">
-      <div class="insight-img" style="background: linear-gradient(135deg, #1e2830, #080808);"></div>
+      <div class="insight-img">
+        <img src="images/insight-transformatie.jpg" alt="Bouwplaats transformatieproject" style="width:100%;height:100%;object-fit:cover;">
+      </div>
       <div class="insight-body">
         <div class="insight-category">Inspiratie</div>
         <div class="insight-title">5 transformatieprojecten die bewezen dat lef loont</div>
